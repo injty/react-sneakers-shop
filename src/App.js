@@ -4,9 +4,9 @@ import Card from "./components/Card";
 
 const arr = [
   { name: 'Nike Blazer Mid Suede Green', price: '12999', imageUrl: '/img/sneakers/1.jpg' },
-  { name: 'Nike Blazer Mid Suede', price: '16999', imageUrl: '/img/sneakers/2.jpg' },
+  { name: 'Мужские Кроссовки Nike Air Max 270', price: '16999', imageUrl: '/img/sneakers/2.jpg' },
   { name: 'Nike Blazer Mid Suede White', price: '13999', imageUrl: '/img/sneakers/3.jpg' },
-  { name: 'Nike Blazer Mid Suede', price: '11999', imageUrl: '/img/sneakers/4.jpg' },
+  { name: 'Мужские Кроссовки Nike Blazer Mid Suede', price: '11999', imageUrl: '/img/sneakers/4.jpg' },
 ]
 
 function App() {
@@ -28,6 +28,8 @@ function App() {
               title={obj.name}
               price={obj.price}
               imageUrl={obj.imageUrl}
+              onFavoriteBtn={() => console.log('Add in favorite')}
+              onPlusBtn={() => console.log('Add in basket')}
             />
           ))}
         </div>
