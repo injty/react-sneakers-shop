@@ -3,8 +3,10 @@ import styles from './Card.module.css'
 
 function Card(props) {
 
-  const onClickHandler = () => {
-    alert(props.price)
+  const [isAdded, setIsAdded] = React.useState(false);
+
+  const onClickPlus = () => {
+    setIsAdded(!isAdded);
   }
 
   return (
@@ -19,9 +21,7 @@ function Card(props) {
           <span>Price:</span>
           <b>{props.price}</b>
         </div>
-        <button className={styles.button} onClick={onClickHandler}>
-          <img src="/img/icons/btn-plus.svg" alt="Plus" />
-        </button>
+        <img className={styles.plus} onClick={onClickPlus} src={isAdded ? "/img/icons/btn-checked.svg" : "/img/icons/btn-plus.svg"} alt="Plus" />
       </div>
     </div>
   )

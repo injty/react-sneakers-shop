@@ -1,13 +1,14 @@
 import React from 'react'
 
-function Drawer() {
+function Drawer(props) {
+
   return (
-    <div style={{ display: 'none' }} className="overlay">
+    <div className="overlay">
       <div className="drawer">
 
         <h2 className="d-flex justify-between mb-20">
           Basket
-          <img className="removeBtn cu-p" src="/img/icons/btn-remove.svg" alt="Remove" />
+          <img onClick={props.onCloseCart} className="removeBtn cu-p" src="/img/icons/btn-remove.svg" alt="Close" />
         </h2>
 
         <div className="items">
