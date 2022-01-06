@@ -1,13 +1,13 @@
 body {
 	margin: 0;
-	font-family: 'Inter', system-ui;
+	font-family: "Inter", system-ui;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	background-color: #e7f6ff;
 }
 
 * {
-	font-family: 'Inter', system-ui;
+	font-family: "Inter", system-ui;
 	margin: 0;
 	padding: 0;
 	-webkit-box-sizing: border-box;
@@ -44,6 +44,15 @@ p {
 	border: 1px solid #f2f2f2;
 	padding: 0 15px;
 	border-radius: 10px;
+	position: relative;
+}
+.clear-btn {
+	position: absolute;
+	top: 50%;
+	right: 15px;
+	transform: translateY(-50%);
+	height: 20px;
+	width: 20px;
 }
 
 .search-block input {
